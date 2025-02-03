@@ -5,6 +5,13 @@
     font-family: "Roboto", serif;
 }
 
+.carousel-item img{
+    width: 100vw;
+    height: 60vh !important;
+    background-size: 100% 100% !important;
+    
+}
+
 .header {
     width: 100%;
     height: auto;
@@ -43,60 +50,63 @@
     word-spacing: 20px;
 }
 
-.container {
-    width: 100%; 
-    height: auto;
-    /* border: 2px solid; */
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
 a {
     text-decoration: none;
     color: black;
     font-size: 1rem;
 }
 
-.container img {
-    height: auto;
-    /* border: 2px solid; */
-}
-
-.a {
+.container {
     width: 70%;
     height: auto;
     /* border: 2px solid; */
     display: flex;
     padding: 20px;
     flex-wrap: wrap;
-    place-items: center;
-    justify-content: space-between;
+    /* place-items: center; */
+    justify-content: space-around;
 }
 
 button {
     padding: 10px;
     width: 100px;
     background-color: #ffc221;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 .container-1 {
     height: auto;
     width: 100%;
     position: relative;
-    background-image: url("https://themewagon.github.io/lighten/images/banner2.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .para {
     display: flex;
     flex-direction: column;
+    top: 30px;
     margin-left: 15%;
-    padding-top: 2%;
-    width: 50%;
+    position: absolute;
+    line-height: 50px;
+}
 
+.see {
+    width: 250px;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    background-color: #ffc221;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.see:hover {
+    background-color: black;
 }
 
 .bold {
@@ -112,20 +122,68 @@ button {
 .long {
     font-weight: bolder;
     font-style: italic;
+    margin-top: 10px;
 }
 
-.see {
-    width: 250px;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    text-align: center;
-    background-color: #ffc221;
-    padding: 12px;
-    margin: 20px;
-    color: white;
-    font-size: 1.2rem;
+@media (max-width: 1200px) {
+    .para {
+        margin-left: 10%;
+        text-align: center;
+    }
+
+    .bold {
+        font-size: 4rem;
+    }
+
+    .long {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .para {
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+
+    .bold {
+        font-size: 3.5rem;
+    }
+
+    .long {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .see {
+        width: 200px;
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .para {
+        margin-left: 0;
+        /* text-align: center; */
+        position: relative;
+        top: 10%;
+        /* margin-top: 10px; */
+    }
+
+    .bold {
+        font-size: 2.5rem;
+    }
+
+    .long {
+        font-size: 0.9rem;
+    }
+
+    .see {
+        width: 100px;
+        font-size: 1rem;
+        padding: 8px;
+    }
 }
 
 .see:hover {
@@ -440,7 +498,8 @@ button {
     padding-top: 30px;
     text-transform: uppercase;
 }
-.foot p{
+
+.foot p {
     width: 100%;
     height: auto;
     /* border: 2px solid white; */
@@ -451,6 +510,12 @@ button {
     line-height: 22px;
     padding: 20px;
     margin-top: 50px;
+}
+
+.box0>img:hover,
+.item>img:hover {
+    transform: rotate(360deg) scale(1);
+    transition: 2.2s ease;
 }
 
 
@@ -467,16 +532,20 @@ button {
         flex-direction: column;
         height: auto;
     }
-    .end div{
+
+    .end div {
         font-size: 20px;
     }
-    .para .bold{
-         font-size: 3rem;
+
+    .para .bold {
+        font-size: 3rem;
     }
-    .para .long{
+
+    .para .long {
         font-size: 1rem;
     }
-    .container4-1{
+
+    .container4-1 {
         justify-content: center;
         align-items: center;
     }
@@ -484,7 +553,8 @@ button {
     .sub-container2-1 span {
         font-size: 25px;
     }
-    .sub-container{
+
+    .sub-container {
         justify-content: center;
         align-items: center;
     }
